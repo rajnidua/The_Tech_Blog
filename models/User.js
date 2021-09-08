@@ -16,7 +16,11 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    fname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -27,6 +31,11 @@ User.init(
       validate: {
         isEmail: true,
       },
+    },
+    created_date: {
+      type: DataTypes.DATETIME,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     password: {
       type: DataTypes.STRING,

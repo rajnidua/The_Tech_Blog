@@ -1,17 +1,23 @@
 [
   {
-    "name": "Sal",
+    "fname": "Sal",
+    "lname": "Lawson",
     "email": "sal@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "created_date": "07/01/2021"
   },
   {
-    "name": "Lernantino",
+    "fname": "Lernantino",
+    "lname": "Smith",
     "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "created_date": "27/07/2021"
   },
   {
-    "name": "Amiko",
+    "fname": "Amiko",
+    "lname": "Strong",
     "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "created_date": "16/08/2021"
   }
 ]
