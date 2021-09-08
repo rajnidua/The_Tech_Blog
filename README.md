@@ -4,6 +4,7 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 # Installations & Dependencies
 
+```md
 npm install
 npm install sequelize
 npm init -y
@@ -14,3 +15,4 @@ npm install express-handlebars
 npm install bcrypt
 npm install express-session
 npm install connect-session-sequelize
+```
