@@ -33,7 +33,7 @@ User.init(
       },
     },
     created_date: {
-      type: DataTypes.DATETIME,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },

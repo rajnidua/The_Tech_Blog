@@ -2,19 +2,16 @@
   {
     "post_id": 1,
     "content": "This is a comment on post 1",
-    "commented_by": 2,
-    "created_date": "07/09/2021"
+    "commented_by": 2
   },
   {
     "post_id": 2,
     "content": "This is a comment for this post",
-    "commented_by": 1,
-    "created_date": "29/07/2021"
+    "commented_by": 1
   },
   {
     "post_id": 3,
     "content": "This is a comment on post 3",
-    "commented_by": 2,
-    "created_date": "28/082021"
+    "commented_by": 2
   }
 ]

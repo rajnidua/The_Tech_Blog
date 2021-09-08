@@ -3,24 +3,24 @@
     "title": "Music Near Me",
     "content": "A mobile app that will send you notifications whenever a concert is playing in your area.",
     "author_id": 3,
-    "created_date": "29/01/2010",
-    "updated_date": "29/01/2020",
+
+    "updated_date": null,
     "summary": "This is summary of blog post 1"
   },
   {
     "title": "The Ultimate Tech Quiz",
     "content": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
     "author_id": 1,
-    "created_date": "14/01/2010",
-    "updated_date": "29/01/2020",
+
+    "updated_date": null,
     "summary": "this is a summary of blog post 2"
   },
   {
     "title": "Roll 'Em Up",
     "content": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
     "author_id": 2,
-    "created_date": "29/03/2010",
-    "updated_date": "29/01/2020",
+
+    "updated_date": null,
     "summary": "this is a summary of blog post 3"
   }
 ]
