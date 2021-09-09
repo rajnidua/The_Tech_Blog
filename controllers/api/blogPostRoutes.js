@@ -1,4 +1,4 @@
-/* const router = require("express").Router();
+const router = require("express").Router();
 const { Blogpost } = require("../../models");
 const withAuth = require("../../utils/auth");
 
@@ -20,7 +20,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     const BlogpostData = await Blogpost.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        author_id: req.session.user_id,
       },
     });
 
@@ -36,4 +36,3 @@ router.delete("/:id", withAuth, async (req, res) => {
 });
 
 module.exports = router;
- */

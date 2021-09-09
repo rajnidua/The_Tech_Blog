@@ -50,4 +50,16 @@ http://localhost:3001/
 get request for a single blogpost (homeRoutes.js)
 http://localhost:3001/Blogpost/2
 ('2' is the blogpost id)
+
+post request for blogpost (blogPostRoutes.js)
+http://localhost:3001/api/blogpost
+BODY(JSON)
+{
+"title": "The Ultimate Tech Quiz",
+"content": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
+
+}
+
+delete request for blogpost(blogPostRoutes.js)
+http://localhost:3001/api/blogpost/:id
 ```
