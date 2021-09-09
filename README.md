@@ -16,3 +16,38 @@ npm install bcrypt
 npm install express-session
 npm install connect-session-sequelize
 ```
+
+Routes
+
+```md
+get route for login(homeRoutes.js)
+http://localhost:3001/login
+
+get route to view complete profile of logged in(homeRoutes.js)
+http://localhost:3001/Profile
+
+post route for logging in(UserRoutes.js)
+http://localhost:3001/api/users/login
+Body(JSON)
+{
+"email": "lernantino@gmail.com",
+"password": "password12345"
+}
+
+post route for new user (userRoutes.js)
+http://localhost:3001/api/users/
+Bosy(JSON)
+{
+"fname":"new",
+"lname":"user1",
+"email": "newuser@gmail.com",
+"password": "password12345"
+}
+
+get request for all blogpost(homeRoutes.js)
+http://localhost:3001/
+
+get request for a single blogpost (homeRoutes.js)
+http://localhost:3001/Blogpost/2
+('2' is the blogpost id)
+```
