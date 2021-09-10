@@ -1,5 +1,5 @@
 {
-  "name": "The_Tech_Blog",
+  "name": "tech-blog-rajni",
   "version": "1.0.0",
   "description": "A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.",
   "main": "server.js",
@@ -16,7 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

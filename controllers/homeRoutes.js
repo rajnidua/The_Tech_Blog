@@ -120,6 +120,7 @@ router.get("/profile", withAuth, async (req, res) => {
     });
     console.log("$$$$$$$$$$$$" + userData);
     const user = userData.get({ plain: true });
+    console.log("tttttttttt" + user.fname);
     //res.json(user);
     res.render("profile", {
       ...user,
@@ -134,7 +135,7 @@ router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect("/profile");
-    //res.json({ message: "loggedin" });
+    res.json({ message: "loggedin" });
     return;
   }
 
