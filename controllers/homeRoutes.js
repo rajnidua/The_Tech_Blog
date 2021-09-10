@@ -75,6 +75,40 @@ router.get("/Blogpost/:id", async (req, res) => {
   }
 });
 
+router.get("/updateBlogpost/:id", async (req, res) => {
+  try {
+    console.log("The value of params id is " + req.params.id);
+    const BlogpostData = await Blogpost.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["id", "fname", "lname"],
+        },
+        {
+          model: Postcomment,
+          attributes: ["id", "content", "created_date"],
+          include: [
+            {
+              model: User,
+              attributes: ["id", "fname", "lname"],
+            },
+          ],
+        },
+      ],
+    });
+    //const BlogpostData = 1;
+    console.log("===================" + BlogpostData);
+    const selectedBlogpost = BlogpostData.get({ plain: true });
+    //res.json(selectedBlogpost);
+    res.render("updateblogpost", {
+      ...selectedBlogpost,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get("/profile", withAuth, async (req, res) => {
   try {
