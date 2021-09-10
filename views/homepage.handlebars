@@ -9,7 +9,7 @@
         <a href="/blogpost/{{blogpost.id}}">{{blogpost.title}}</a>
       </h2>
       <p>
-        <span for="img" aria-label="money">💲</span>
+        <span for="img" aria-label="money"></span>
         <!-- Pass needed_funding value to the helper function -->
         <span class="dollar-amount"Need to add something here}</span>
         needed!
@@ -29,17 +29,31 @@
 {{/each}}  --}}
 
 {{#each Blogposts as |blogpost|}}
-  <div class="card text-center">
+  <div class="card text-right">
     <div class="card-header">
-      {{blogpost.title}}
+      <div class="row justify-space-between p-4">
+        <h5 class="card-title">{{blogpost.title}}</h5>
+        <p>Created On: {{format_date created_date}}</p>
+
+      </div>
     </div>
+
     <div class="card-body">
-      <h5 class="card-title">Created by : {{blogpost.user.fname}}</h5>
-      <p class="card-text">{{blogpost.summary}}</p>
-      <a href="/blogpost/{{blogpost.id}}" class="btn btn-primary">Vist Blog</a>
+      <div class="row">
+        <div class="col col-md-3">
+          <h5 class="card-title text-left">{{blogpost.title}}</h5>
+          {{!-- <p>{{get_emoji}}</p> --}}
+          {{!-- <img src="{{get_emoji}}" alt="blog-image" /> --}}
+        </div>
+        <div class="col col-md-3 text-right">
+          <p class="card-text">{{blogpost.summary}}</p>
+          <p>Created by : {{blogpost.user.fname}}</p>
+
+        </div>
+      </div>
     </div>
-    <div class="card-footer text-muted">
-      {{format_date created_date}}
+    <div class="card-footer text-muted text-center">
+      <a href="/blogpost/{{blogpost.id}}" class="btn btn-primary">Visit Blog</a>
     </div>
   </div>
 {{/each}}

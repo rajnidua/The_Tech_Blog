@@ -10,6 +10,22 @@
     needed
   </p>
   <p>
-    <button class="btn btn-primary">Fund this Project!</button>
+    <div class="col-md-6">
+      <h2>Comment</h2>
+
+      <form class="form signup-form">
+        <div class="form-group">
+          <label for="name-signup">Comment:</label>
+          <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div><p>posted by
+            {{user.fname}}
+            on
+            {{format_date created_date}}</p></div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Post Comment</button>
+        </div>
+      </form>
+    </div>
   </p>
 </div>
