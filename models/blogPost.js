@@ -25,7 +25,7 @@ Blogpost.init(
     },
     created_date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
       defaultValue: DataTypes.NOW,
     },
     updated_date: {

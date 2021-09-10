@@ -60,6 +60,20 @@ BODY(JSON)
 
 }
 
+put request for blogpost(blogPostRoutes.js)
+http://localhost:3001/api/blogpost/:id
+
 delete request for blogpost(blogPostRoutes.js)
 http://localhost:3001/api/blogpost/:id
+
+post request for postcomment (blogPostRoutes.js)
+http://localhost:3001/api/blogpost/:post_id/postcomment
+BODY(JSON)
+{
+
+"content": "This is the first comment on the post"
+}
+
+delete request for postcomment(postCommentRoutes.js)
+http://localhost:3001/api/comments/:id
 ```
