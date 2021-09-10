@@ -66,31 +66,37 @@
 
     <div class="card-body">
       <div class="row">
-        <div class="col col-md-3">
-          <h5 class="card-title text-left">{{title}}</h5>
+        <div class="row text-left p-4">
+          <div class="col col-md-12">
+            <p class="card-text">CONTENT: {{content}}</p>
 
+          </div>
         </div>
-        <div class="col col-md-3 text-right">
-          <p class="card-text">{{content}}</p>
-          <p class="card-text">{{summary}}</p>
+        <div class="row text-left p-4">
+          <div class="col col-md-12">
 
+            <p class="card-text">SUMMARY:{{summary}}</p>
+
+          </div>
         </div>
-        <div class="col col-md-3 text-right">
-          {{#if postcomments.length}}
-            {{#each postcomments as |postcomment|}}
-              <div class="row">
-                <h3>COMMENTS</h3>
-                <div class="col col-md 8">
-                  <p>{{postcomment.content}}</p>
+        <div class="row">
+          <div class="col col-md-12 text-right">
+            {{#if postcomments.length}}
+              {{#each postcomments as |postcomment|}}
+                <div class="row">
+                  <h3>COMMENTS</h3>
+                  <div class="col col-md 8">
+                    <p>{{postcomment.content}}</p>
+                  </div>
+                  <div class="col col-md-4">
+                    <p>{{postcomment.user.fname}} {{postcomment.user.lname}}</p>
+                  </div>
                 </div>
-                <div class="col col-md-4">
-                  <p>{{postcomment.user.fname}} {{postcomment.user.lname}}</p>
-                </div>
-              </div>
 
-            {{/each}}
-          {{/if}}
+              {{/each}}
+            {{/if}}
 
+          </div>
         </div>
 
       </div>
