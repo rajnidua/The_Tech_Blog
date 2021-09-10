@@ -1,14 +1,12 @@
-<div class="text-center">
+{{!-- <div class="text-center">
   <h2>{{title}}</h2>
-  <p>fill somethign</p>
+
   <p>{{content}}</p>
   <p>{{summary}}</p>
   <p>Created by {{user.fname}} on {{format_date created_date}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">try</span>
-    needed
-  </p>
+  {{#if updated_date}}
+    <p>Updated by {{user.fname}} on {{format_date updated_date}}</p>
+  {{/if}}
   <div>
     {{#if postcomments.length}}
       <div class="col-md-6 project-list">
@@ -51,6 +49,77 @@
       </form>
     </div>
   </p>
+</div> --}}
+
+{{! <script src="../js/postcomment.js"></script> }}
+
+<div class="container container-fluid mt-5">
+
+  <div class="card text-right">
+    <div class="card-header">
+      <div class="row justify-space-between p-4">
+        <h5 class="card-title">{{title}}</h5>
+        <p>Created On: {{format_date created_date}}</p>
+
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col col-md-3">
+          <h5 class="card-title text-left">{{title}}</h5>
+
+        </div>
+        <div class="col col-md-3 text-right">
+          <p class="card-text">{{content}}</p>
+          <p class="card-text">{{summary}}</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted text-center">
+      <p>Created by :
+        {{user.fname}}</p>
+    </div>
+  </div>
+  <div class="card text-right">
+    <div class="card-header">
+      <div class="row justify-space-between p-4">
+        <h5 class="card-title text-center">COMMENT</h5>
+
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+
+        <div class="col col-md-12 text-right">
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="name-signup"></label>
+              <input class="form-input" type="text" id="name-signup" />
+            </div>
+            <div>
+              <div id="pickId" data-id1="{{id}}" data-id2="{{user.id}}"></div>
+
+            </div>
+            <div class="form-group text-center">
+              <button class="btn btn-primary" type="submit">Post Comment</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted text-right">
+      <p>posted by :
+        {{user.fname}}</p>
+      <p>posted on
+        {{format_date created_date}}
+      </p>
+    </div>
+  </div>
+
 </div>
 
 <script src="../js/postcomment.js"></script>

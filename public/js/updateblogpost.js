@@ -6,11 +6,12 @@ const updateButtonHandler = async (event) => {
   const summary = document.querySelector("#project-desc").value.trim();
   const paramValue = document.querySelector("#pickId");
   const post_id = paramValue.dataset.id1;
-
+  console.log("patch request");
   const fetchURL = "/api/blogpost/" + post_id;
+  const responseURL = "/blogpost/" + post_id;
   if (title) {
     const response = await fetch(fetchURL, {
-      method: "PUT",
+      method: "PATCH",
       body: JSON.stringify({ title, content, summary }),
       headers: {
         "Content-Type": "application/json",
@@ -18,13 +19,13 @@ const updateButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace(fetchURL);
+      document.location.replace(responseURL);
     } else {
-      alert("Something went wrong. Try updating blog post later");
+      console.log("Something went wrong. Try updating blog post later");
     }
   }
 };
 
 document
   .querySelector(".update-blog-form")
-  .addEventListener("click", updateButtonHandler);
+  .addEventListener("submit", updateButtonHandler);

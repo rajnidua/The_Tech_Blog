@@ -49,8 +49,10 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
-router.put("/:id", withAuth, async (req, res) => {
+router.patch("/:id", withAuth, async (req, res) => {
   try {
+    console.log("requestid" + req.params.id);
+    console.log("requestuserid" + req.session.user_id);
     const updatedBlogpost = await Blogpost.update(
       {
         ...req.body,
