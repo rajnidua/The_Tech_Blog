@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Postcomment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.post("/", withAuth, async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     res.status(400).json({ message: "Bad Request" });
   } catch (err) {

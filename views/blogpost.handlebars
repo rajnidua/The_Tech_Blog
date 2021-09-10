@@ -9,6 +9,22 @@
     <span class="dollar-amount">try</span>
     needed
   </p>
+  <div>
+    {{#if postcomments.length}}
+      <div class="col-md-6 project-list">
+        <h3>Current BlogPosts:</h3>
+
+        {{#each postcomments as |postcomment|}}
+          <div class="row mb-2">
+            <div class="col-md-8">
+              <h4>{{postcomment.content}}</h4>
+            </div>
+
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
   <p>
     <div class="col-md-6">
       <h2>Comment</h2>
@@ -18,14 +34,28 @@
           <label for="name-signup">Comment:</label>
           <input class="form-input" type="text" id="name-signup" />
         </div>
-        <div><p>posted by
+        <div>
+          <div id="pickId" data-id1="{{id}}" data-id2="{{user.id}}"></div>
+
+          <p>posted by
             {{user.fname}}
             on
-            {{format_date created_date}}</p></div>
+            {{format_date created_date}}
+            where post id is
+            {{id}}
+            and user id is
+            {{user.id}}</p></div>
         <div class="form-group">
-          <button class="btn btn-primary" type="submit">Post Comment</button>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            {{!-- data-postId="{{id}}"
+            data-commentorId="{{id}}" --}}
+          >Post Comment</button>
         </div>
       </form>
     </div>
   </p>
 </div>
+
+<script src="../js/postcomment.js"></script>
