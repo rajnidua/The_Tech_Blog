@@ -1,8 +1,8 @@
-<!-- Loop over each object in the projects array -->
+{{!-- <!-- Loop over each object in the projects array -->
 
  {{#each Blogposts as |blogpost|}}
   <div class="row mb-4 project">
-    <p>bdgkjdkjg dshgjdfkjgdf dfhbdkfj</p>
+    
      <div class="col-md-5">
       <h2>
        
@@ -26,4 +26,20 @@
       </p>
     </div> 
   </div>
-{{/each}} 
+{{/each}}  --}}
+
+{{#each Blogposts as |blogpost|}}
+  <div class="card text-center">
+    <div class="card-header">
+      {{blogpost.title}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Created by : {{blogpost.user.fname}}</h5>
+      <p class="card-text">{{blogpost.summary}}</p>
+      <a href="/blogpost/{{blogpost.id}}" class="btn btn-primary">Vist Blog</a>
+    </div>
+    <div class="card-footer text-muted">
+      {{format_date created_date}}
+    </div>
+  </div>
+{{/each}}
