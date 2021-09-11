@@ -7,7 +7,7 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 ## Table of contents
 
 - [Description](#Description)
-- [Video Link](#VideoLink)
+- [Heroku Deployed Link](#DeployedApp)
 - [Installation](#Installations)
 - [Usage](#Usage)
 - [Testing](#Testing)
@@ -53,13 +53,15 @@ WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
+## DeployedApp
+
+https://tech-blog-rajni.herokuapp.com
+
 ## Screenshots
 
 ![](./public/images/screenshot1.png)
 ![](./public/images/screenshot2.png)
 ![](./public/images/screenshot3.png)
-
-## VideoLink
 
 ## Usage
 
