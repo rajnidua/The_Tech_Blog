@@ -55,6 +55,10 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Screenshots
 
+[](./public/images/screenshot1.png)
+[](./public/images/screenshot2.png)
+[](./public/images/screenshot3.png)
+
 ## VideoLink
 
 ## Usage
