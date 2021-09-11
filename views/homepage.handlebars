@@ -1,6 +1,6 @@
 {{#each Blogposts as |blogpost|}}
-  <div class="card" style="width: 60rem;">
-    {{! <img src="..." class="card-img-top" alt="..."> }}
+  <div class="card" style="width: 80rem;">
+
     <div class="card-body">
       <div class="card-header">
         <h5 class="card-title">{{blogpost.title}}</h5>
@@ -11,10 +11,6 @@
         {{blogpost.user.lname}}</p>
     </div>
 
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
     <div class="card-footer text-muted text-center">
       <a href="/blogpost/{{blogpost.id}}" class="btn btn-primary">Visit Blog</a>
     </div>
