@@ -1,25 +1,19 @@
 {{#each Blogposts as |blogpost|}}
-  <div class="card text-right">
-    <div class="card-header">
-      <div class="row justify-space-between p-4">
+  <div class="card" style="width: 60rem;">
+    {{! <img src="..." class="card-img-top" alt="..."> }}
+    <div class="card-body">
+      <div class="card-header">
         <h5 class="card-title">{{blogpost.title}}</h5>
-        <p>Created On: {{format_date created_date}}</p>
-
+        <p>Created On: {{format_date blogpost.created_date}}</p>
       </div>
+      <p class="card-text">SUMMARY:{{blogpost.summary}}</p>
+      <p class="card-text">CREATED BY:{{blogpost.user.fname}}
+        {{blogpost.user.lname}}</p>
     </div>
 
     <div class="card-body">
-      <div class="row">
-        <div class="col col-md-3">
-          <h5 class="card-title text-left">{{blogpost.title}}</h5>
-
-        </div>
-        <div class="col col-md-3 text-right">
-          <p class="card-text">{{blogpost.summary}}</p>
-          <p>Created by : {{blogpost.user.fname}}</p>
-
-        </div>
-      </div>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
     </div>
     <div class="card-footer text-muted text-center">
       <a href="/blogpost/{{blogpost.id}}" class="btn btn-primary">Visit Blog</a>

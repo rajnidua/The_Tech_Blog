@@ -1,111 +1,28 @@
-{{!-- <div class="text-center">
-  <h2>{{title}}</h2>
+<div class="card" style="width: 80rem;">
 
-  <p>{{content}}</p>
-  <p>{{summary}}</p>
-  <p>Created by {{user.fname}} on {{format_date created_date}}</p>
-  {{#if updated_date}}
-    <p>Updated by {{user.fname}} on {{format_date updated_date}}</p>
-  {{/if}}
-  <div>
-    {{#if postcomments.length}}
-      <div class="col-md-6 project-list">
-        <h3>Current BlogPosts:</h3>
-
-        {{#each postcomments as |postcomment|}}
-          <div class="row mb-2">
-            <div class="col-md-8">
-              <h4>{{postcomment.content}}</h4>
-            </div>
-
-          </div>
-        {{/each}}
-      </div>
-    {{/if}}
-  </div>
-  <p>
-    <div class="col-md-6">
-      <h2>Comment</h2>
-
-      <form class="form signup-form">
-        <div class="form-group">
-          <label for="name-signup">Comment:</label>
-          <input class="form-input" type="text" id="name-signup" />
-        </div>
-        <div>
-          <div id="pickId" data-id1="{{id}}" data-id2="{{user.id}}"></div>
-
-          <p>posted by
-            {{user.fname}}
-            on
-            {{format_date created_date}}
-            where post id is
-            {{id}}
-            and user id is
-            {{user.id}}</p></div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">Post Comment</button>
-        </div>
-      </form>
+  <div class="card-body">
+    <div class="card-header">
+      <h5 class="card-title">{{title}}</h5>
+      <p>Created On: {{format_date created_date}}</p>
     </div>
-  </p>
-</div> --}}
+    <p class="card-text">CONTENT: {{content}}</p>
+    <p class="card-text">SUMMARY: {{summary}}</p>
+  </div>
+  {{#if postcomments.length}}
+    <h3>COMMENTS</h3>
+    {{#each postcomments as |postcomment|}}
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{postcomment.user.fname}}
+          {{postcomment.user.lname}}::{{postcomment.content}}</li>
 
-{{! <script src="../js/postcomment.js"></script> }}
+      </ul>
+    {{/each}}
+  {{/if}}
+
+</div>
 
 <div class="container container-fluid mt-5">
 
-  <div class="card text-right">
-    <div class="card-header">
-      <div class="row justify-space-between p-4">
-        <h5 class="card-title">{{title}}</h5>
-        <p>Created On: {{format_date created_date}}</p>
-
-      </div>
-    </div>
-
-    <div class="card-body">
-      <div class="row">
-        <div class="row text-left p-4">
-          <div class="col col-md-12">
-            <p class="card-text">CONTENT: {{content}}</p>
-
-          </div>
-        </div>
-        <div class="row text-left p-4">
-          <div class="col col-md-12">
-
-            <p class="card-text">SUMMARY:{{summary}}</p>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-md-12 text-right">
-            {{#if postcomments.length}}
-              {{#each postcomments as |postcomment|}}
-                <div class="row">
-                  <h3>COMMENTS</h3>
-                  <div class="col col-md 8">
-                    <p>{{postcomment.content}}</p>
-                  </div>
-                  <div class="col col-md-4">
-                    <p>{{postcomment.user.fname}} {{postcomment.user.lname}}</p>
-                  </div>
-                </div>
-
-              {{/each}}
-            {{/if}}
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="card-footer text-muted text-center">
-      <p>Created by :
-        {{user.fname}}</p>
-    </div>
-  </div>
   <div class="card text-right">
     <div class="card-header">
       <div class="row justify-space-between p-4">
